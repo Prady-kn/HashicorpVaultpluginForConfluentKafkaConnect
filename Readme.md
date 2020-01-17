@@ -19,3 +19,41 @@ $ docker run -d --name=cp-kafkaconnect-with-hashicorpvault --hostname kafkaconne
 > Update the highlighted Vault role id, secret id and the vault url accordingly.
 
 > Update the other Kafka connect related values according to your environment/need.
+
+## Creating Connector instance
+
+POST http://localhost:28083/connectors
+
+**Http Header:**
+
+`Content-Type: application/json`
+
+**Html Body:**
+```javascript
+{
+   "name":"jdbc_source_mysql_01",
+   "config":{
+      "connector.class":"io.confluent.connect.jdbc.JdbcSourceConnector",
+      "connection.url":"jdbc:sqlserver://<DB SERVER>:<DB PORT>;database=<DB NAME>",
+      "connection.user":"${vault:/secrets/data/kg/sqlserver:userid}",
+      "connection.password":"${vault:/secrets/data/kg/sqlserver:pwd}",
+      "topic.prefix":"mysql-08-",
+      "mode":"timestamp",
+      "table.whitelist":"person_from",
+      "timestamp.column.name":"dtcreatedon",
+      "validate.non.null":false
+   }
+}
+```
+
+**Json properties:**
+> connection.url: Database connection string
+
+> connection.user : Specify the secret path and the key value as per Vault ex: ${vault:/secrets/data/kg/sqlserver:userid}, here *userid* is the key name as per Vault,  */kg/sqlserver* is the path & *secrets* is the secret engine name as per Vault.
+
+![Vault ](./docs/vault_screen.PNG)
+
+> connection.password : Points to Vault key containing the required password (Similar to connection.user).
+
+
+
