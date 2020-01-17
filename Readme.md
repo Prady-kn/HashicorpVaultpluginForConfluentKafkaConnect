@@ -1,7 +1,7 @@
 # Docker image for Confluent Kafka Connect with Hashicorp Vault Plugin
 ***
 
-## Prerequisites
+## Prerequisite
 
 * Running instance of Kakfa
 * Configure the Hashicrop Vault with required secrets and start the container as shown below.
