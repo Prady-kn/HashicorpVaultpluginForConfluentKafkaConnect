@@ -46,7 +46,7 @@ POST http://localhost:28083/connectors  <-- (Kafka connector endpoint)
 ```
 
 **Json properties:**
-> connection.url: Database connection string
+> connection.url: Database connection string.
 
 > connection.user : Specify the secret path and the key value as per Vault ex: ${vault:/secrets/data/kg/sqlserver:userid}, here *userid* is the key name as per Vault,  */kg/sqlserver* is the path & *secrets* is the secret engine name as per Vault.
 
