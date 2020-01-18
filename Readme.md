@@ -27,7 +27,7 @@ POST http://localhost:28083/connectors  <-- (Kafka connector endpoint)
 
 `Content-Type: application/json`
 
-**Html Body:**
+**Body:**
 ```javascript
 {
    "name":"jdbc_source_mysql_01",
@@ -50,7 +50,7 @@ POST http://localhost:28083/connectors  <-- (Kafka connector endpoint)
 
 > connection.user : Specify the secret path and the key value as per Vault ex: ${vault:/secrets/data/kg/sqlserver:userid}, here *userid* is the key name as per Vault,  */kg/sqlserver* is the path & *secrets* is the secret engine name as per Vault.
 
-![Vault ](./docs/vault_screen.PNG)
+![Vault ](docs/vault_screen.PNG)
 
 > connection.password : Points to Vault key containing the required password (Similar to connection.user).
 
