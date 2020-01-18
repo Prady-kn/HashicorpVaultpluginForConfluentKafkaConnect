@@ -20,7 +20,7 @@ $ docker run -d --name=cp-kafkaconnect-with-hashicorpvault --hostname kafkaconne
 
 > *sqljdbc/mssql-jdbc-7.2.2.jre8.jar* is only required if you are connecting to ms sql server. The current sample uses ms sql server. 
 
-> The current sample uses confluent kafka connect image but vault config provider implementation doesnt depend on any confluent components.
+> The current sample uses confluent kafka connect image for demonstration purpose but vault config provider implementation doesnt depend on any confluent components.
 
 
 
