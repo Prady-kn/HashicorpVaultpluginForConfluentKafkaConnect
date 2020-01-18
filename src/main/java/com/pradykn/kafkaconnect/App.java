@@ -37,6 +37,7 @@ public class App {
 
 		VaultConfigProvider valprov = new VaultConfigProvider();
 		Map<String, String> param = new HashMap<String, String>();
+		//Update below values appropriate to your vault instance
 		param.put("roleid", "c33f5084-ec88-433d-a238-d19b8cf498c9");
 		param.put("secid", "4798b72b-b3a3-f241-4b02-cc45dfff4240");
 		param.put("vaulturl", "http://localhost:8201/v1");
