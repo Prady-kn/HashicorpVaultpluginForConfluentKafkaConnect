@@ -12,17 +12,17 @@ $ docker run -d --name=cp-kafkaconnect-with-hashicorpvault --hostname kafkaconne
 
 
 ### Note:
->This is **not an official** Hashicorp Vault plugin.
+* This is **not an official** Hashicorp Vault plugin.
 
-> Update the highlighted Vault role id, secret id and the vault url accordingly.
+*  Update the highlighted Vault role id, secret id and the vault url accordingly.
 
-> Update the other Kafka connect related values according to your environment/need.
+*  Update the other Kafka connect related values according to your environment/need.
 
-> *sqljdbc/mssql-jdbc-7.2.2.jre8.jar* is only required if you are connecting to ms sql server. The current sample uses ms sql server. 
+*  *sqljdbc/mssql-jdbc-7.2.2.jre8.jar* is only required if you are connecting to ms sql server. The current sample uses ms sql server. 
 
-> The current sample uses confluent kafka connect image for demonstration purpose but vault config provider implementation doesnt depend on any confluent components.
+*  The current sample uses confluent kafka connect image for demonstration purpose but vault config provider implementation doesnt depend on any confluent components.
 
-> For troubleshooting, set CONNECT_LOG4J_ROOT_LOGLEVEL environment variable to DEBUG for detailed logging.
+*  For troubleshooting, set CONNECT_LOG4J_ROOT_LOGLEVEL environment variable to DEBUG for detailed logging.
 
 
 
