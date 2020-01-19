@@ -3,7 +3,7 @@
 ## Prerequisite
 ---
 * Running instance of Kakfa
-* Configure the Hashicrop Vault with required secrets and start the container as shown below.
+* Configure the Hashicrop Vault with required secrets, enable app role, create app role id, secret id and configure policy.
 
 ## Running the Confluent Kafka connector container with Hashicorp Vault plugin:
 ---
@@ -21,6 +21,8 @@ $ docker run -d --name=cp-kafkaconnect-with-hashicorpvault --hostname kafkaconne
 > *sqljdbc/mssql-jdbc-7.2.2.jre8.jar* is only required if you are connecting to ms sql server. The current sample uses ms sql server. 
 
 > The current sample uses confluent kafka connect image for demonstration purpose but vault config provider implementation doesnt depend on any confluent components.
+
+> For troubleshooting, set CONNECT_LOG4J_ROOT_LOGLEVEL environment variable to DEBUG for detailed logging.
 
 
 
