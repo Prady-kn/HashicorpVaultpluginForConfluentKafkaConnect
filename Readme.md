@@ -43,7 +43,7 @@ POST http://localhost:28083/connectors  <-- (Kafka connector endpoint)
       "connector.class":"io.confluent.connect.jdbc.JdbcSourceConnector",
       "connection.url":"jdbc:sqlserver://<DB SERVER>:<DB PORT>;database=<DB NAME>",
       "connection.user":"${vault:/secrets/data/mydb:userid}",
-      "connection.password":"${vault:/secrets/mydb:pwd}",
+      "connection.password":"${vault:/secrets/data/mydb:pwd}",
       "topic.prefix":"mysql-08-",
       "mode":"timestamp",
       "table.whitelist":"customer",
