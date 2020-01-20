@@ -42,8 +42,8 @@ POST http://localhost:28083/connectors  <-- (Kafka connector endpoint)
    "config":{
       "connector.class":"io.confluent.connect.jdbc.JdbcSourceConnector",
       "connection.url":"jdbc:sqlserver://<DB SERVER>:<DB PORT>;database=<DB NAME>",
-      "connection.user":"${vault:/secrets/data/kg/sqlserver:userid}",
-      "connection.password":"${vault:/secrets/data/kg/sqlserver:pwd}",
+      "connection.user":"${vault:/secrets/data/mydb:userid}",
+      "connection.password":"${vault:/secrets/mydb:pwd}",
       "topic.prefix":"mysql-08-",
       "mode":"timestamp",
       "table.whitelist":"customer",
@@ -56,7 +56,7 @@ POST http://localhost:28083/connectors  <-- (Kafka connector endpoint)
 **Json properties:**
 > connection.url: Database connection string.
 
-> connection.user : Specify the secret path and the key value as per Vault ex: ${vault:/secrets/data/kg/sqlserver:userid}, here *userid* is the key name as per Vault,  */kg/sqlserver* is the path & *secrets* is the secret engine name as per Vault.
+> connection.user : Specify the secret path and the key value as per Vault ex: ${vault:/secrets/data/mydb:userid}, here *userid* is the key name as per Vault,  */mydb* is the path & *secrets* is the secret engine name as per Vault.
 
 ![Vault ](https://github.com/Prady-kn/HashicorpVaultpluginForConfluentKafkaConnect/raw/master/docs/vault_screen.PNG)
 
